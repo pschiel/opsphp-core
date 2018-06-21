@@ -1,25 +1,25 @@
 <?php
 
 // include all necessary classes
-require_once 'config/core.php';
-require_once 'config/database.php';
-require_once 'libs/app.php';
-require_once 'libs/request.php';
-require_once 'libs/controller.php';
-require_once 'libs/component.php';
-require_once 'libs/model.php';
-require_once 'libs/view.php';
-require_once 'libs/helper.php';
-require_once 'libs/db.php';
-require_once 'libs/session.php';
-require_once 'libs/cache.php';
-require_once 'controllers/app_controller.php';
-require_once 'models/app_model.php';
-foreach (glob('interfaces/*.php') as $filename) {
+require_once APPDIR . '/config/core.php';
+require_once APPDIR . '/config/database.php';
+require_once COREDIR . '/libs/app.php';
+require_once COREDIR . '/libs/request.php';
+require_once COREDIR . '/libs/controller.php';
+require_once COREDIR . '/libs/component.php';
+require_once COREDIR . '/libs/model.php';
+require_once COREDIR . '/libs/view.php';
+require_once COREDIR . '/libs/helper.php';
+require_once COREDIR . '/libs/db.php';
+require_once COREDIR . '/libs/session.php';
+require_once COREDIR . '/libs/cache.php';
+require_once APPDIR . '/controllers/app_controller.php';
+require_once APPDIR . '/models/app_model.php';
+foreach (glob(APPDIR . '/interfaces/*.php') as $filename) {
 	include $filename;
 }
-if (@file_exists('vendor/autoload.php')) {
-    require_once 'vendor/autoload.php';
+if (@file_exists(APPDIR . '/vendor/autoload.php')) {
+    include APPDIR . '/vendor/autoload.php';
 }
 
 // error handling

@@ -1,12 +1,13 @@
 <?php
 
+define('COREDIR', __DIR__);
 define('APPDIR', dirname(dirname(dirname(dirname(__DIR__)))));
 chdir(APPDIR);
 
 // start app
 try {
 
-	require_once 'libs/bootstrap.php';
+	require_once COREDIR . '/libs/bootstrap.php';
 
 	// console call
 	if (PHP_SAPI == 'cli') {
