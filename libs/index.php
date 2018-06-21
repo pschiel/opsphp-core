@@ -1,6 +1,6 @@
 <?php
 
-define('APPDIR', dirname(__DIR__));
+define('APPDIR', dirname(dirname(dirname(dirname(__DIR__)))));
 chdir(APPDIR);
 
 // start app
