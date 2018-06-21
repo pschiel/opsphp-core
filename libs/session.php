@@ -17,13 +17,6 @@ class Session {
 		}
 
 		if (session_status() == PHP_SESSION_NONE) {
-			ini_set('session.name', SESSION_NAME);
-			ini_set('session.save_path', SESSION_PATH);
-			ini_set('session.cookie_domain', SESSION_DOMAIN);
-			ini_set('session.gc_maxlifetime', '10800');
-			ini_set('session.cookie_lifetime', '788940000');
-			ini_set('session.cache_limiter', 'must-revalidate');
-			ini_set('session.cookie_secure', COOKIE_SECURE);
 			session_start();
 		}
 
@@ -142,6 +135,7 @@ class Session {
 	 */
 	public static function setFlash($message, $type = 'info', $key = 'message') {
 
+		self::start();
 		self::write('flash-' . $key, ['message' => $message, 'type' => $type]);
 
 	}
@@ -153,6 +147,7 @@ class Session {
 	 */
 	public static function flash($key = 'message') {
 
+		self::start();
 		if (isset($_SESSION['flash-' . $key])) {
 			$flash = $_SESSION['flash-' . $key];
 			$message = $flash['message'];
