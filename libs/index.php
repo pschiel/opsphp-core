@@ -1,6 +1,9 @@
 <?php
 
+// path to opsphp core (containing the libs folder)
 define('COREDIR', dirname(__DIR__));
+
+// app base path
 define('APPDIR', dirname(dirname(dirname(dirname(__DIR__)))));
 chdir(APPDIR);
 
