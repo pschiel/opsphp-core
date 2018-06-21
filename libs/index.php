@@ -1,6 +1,6 @@
 <?php
 
-define('COREDIR', __DIR__);
+define('COREDIR', dirname(__DIR__));
 define('APPDIR', dirname(dirname(dirname(dirname(__DIR__)))));
 chdir(APPDIR);
 
