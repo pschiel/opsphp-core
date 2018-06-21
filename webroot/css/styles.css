@@ -1,0 +1,26 @@
+#page { margin: 4px 10px; }
+
+.alert { text-align: center; margin-top: 20px; }
+.alert pre { text-align: left; }
+.errormessage { color: #a94442; }
+.required { color: red; }
+
+.navbar { min-height: 40px; }
+.navbar li a { padding: 9px 15px; }
+.navbar-nav > li.current > a { color: #000; font-weight: bold; }
+.navbar-search { margin: 2px; padding-right: 0; }
+.navbar-search .form-group { position: relative; }
+.navbar-container { padding-left: 0; }
+.form-control { padding: 6px 12px; height: 34px; }
+
+.input-text { position: relative; }
+.input-clear { position: absolute; top: 10px; right: 6px; color: #aaa; }
+div.checkbox { margin-top: 0; }
+.form-end { margin-top: 20px; }
+.form-horizontal label.control-label { text-align: left; }
+
+.table .table-header th { border-bottom: 1px solid #000; white-space: nowrap; }
+td.actions { white-space: nowrap; }
+
+.pagination { margin: 0; }
+
