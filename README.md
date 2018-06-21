@@ -1,2 +1,1 @@
-# opsphp
-Ultra Lightweight PHP Framework
+opsphp core
